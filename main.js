@@ -8,6 +8,6 @@ add.addEventListener("click", addItem);
 function addItem() {
     let item = inputField.value;
     console.log(item);
-    listContainer.innerHTML = item
+    listContainer.innerHTML += `<p>${item}</p>`;
 }
 
