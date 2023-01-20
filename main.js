@@ -3,24 +3,33 @@ let listContainer = document.getElementById("listContainer");
 let add = document.getElementById("add");
 let remove = document.getElementById("remove");
 let count = 0;
+let selectedElement;
 
-//document.querySelector("p").addEventListener("click", g)
-
-add.addEventListener("click", addItem);
-remove.addEventListener("click", removePar)
-function addItem() {
-    count++
-    let item = inputField.value;
+add.addEventListener("click", function() {
     let par = document.createElement("p");
-    par.addEventListener("click", removePar)
-    par.setAttribute("count", count)
-    par.innerText = item
-    console.log(par.innerText);
-    listContainer.appendChild(par)
+    addItem(par);
+});
+remove.addEventListener("click", removeSelected);
+
+function addItem(par) {
+    count++;
+    let item = inputField.value;
+    par.setAttribute("data-count", count);
+    par.innerText = item;
+    listContainer.appendChild(par);
     inputField.value = "";
+    par.addEventListener("click", function() {
+        selectElement(par);
+    });
 }
 
-function removePar() {
-    let pr = this.getAttribute("count")
-   
+function selectElement(par) {
+    selectedElement = par;
+    par.style.backgroundColor = "lightgray";
+}
+
+function removeSelected() {
+    selectedElement.remove();
+    selectedElement = null;
+    count--;
 }
