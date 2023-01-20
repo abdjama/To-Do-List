@@ -11,4 +11,3 @@ function addItem() {
     listContainer.innerHTML = item
 }
 
-console.log("cool");
