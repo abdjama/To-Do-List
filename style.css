@@ -7,9 +7,12 @@ body {
 section {
     height: 250px;
     width: 300px;
-    font-size: 30px;
     float: left;
     border: 1px solid black;
+}
+
+p {
+    font-size: 20px;
 }
 
 
