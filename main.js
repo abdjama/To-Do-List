@@ -3,6 +3,7 @@ let listContainer = document.getElementById("listContainer");
 let add = document.getElementById("add");
 let remove = document.getElementById("remove");
 let selectedElement;
+let arr = [];
 
 add.addEventListener("click", function() {
     let par = document.createElement("p");
@@ -17,11 +18,12 @@ function addItem(par) {
         inputField.value = "";
     }
     else if (inputValue == "") {
-        console.log("invaaalid");
+        // no need to do anything
     }
     else {
         par.innerText = inputValue;
         listContainer.appendChild(par);
+        arr.push(par)
         inputField.value = "";
         par.addEventListener("click", function() {
             selectElement(par);
@@ -45,6 +47,8 @@ function selectElement(par) {
 }
 
 function removeSelected() {
-    selectedElement.remove();
-    selectedElement = null;
+    if (selectedElement) {
+        selectedElement.remove();
+        selectedElement = null;
+    }  
 }
