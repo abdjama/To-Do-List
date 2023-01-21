@@ -4,6 +4,8 @@ let add = document.getElementById("add");
 let remove = document.getElementById("remove");
 let count = 0;
 let selectedElement;
+let arr = [];
+let styleCount = 0;
 
 add.addEventListener("click", function() {
     let par = document.createElement("p");
@@ -12,20 +14,42 @@ add.addEventListener("click", function() {
 remove.addEventListener("click", removeSelected);
 
 function addItem(par) {
-    count++;
-    let item = inputField.value;
-    par.setAttribute("data-count", count);
-    par.innerText = item;
-    listContainer.appendChild(par);
-    inputField.value = "";
-    par.addEventListener("click", function() {
-        selectElement(par);
-    });
+    let inputField = inputField.value;
+    if ((inputField.match(/^[ ]+$/i))) {
+        console.log("invalid");
+    }
+    else if (inputField == "") {
+        console.log("invaaalid");
+    }
+    else {
+        count++;
+        let item = inputField.value;
+        par.setAttribute("data-count", count);
+        par.innerText = item;
+        arr.push(par)
+        console.log(arr);
+        listContainer.appendChild(par);
+        inputField.value = "";
+        par.addEventListener("click", function() {
+            selectElement(par);
+        });
+    }
+   
 }
 
 function selectElement(par) {
     selectedElement = par;
-    par.style.backgroundColor = "lightgray";
+    arr.forEach(p => {
+        if (p == selectedElement && p.style.backgroundColor == "lightgray") {
+            p.style.backgroundColor = "transparent";
+        }
+        else if (p == selectedElement && p.style.backgroundColor != "lightgray") {
+            p.style.backgroundColor = "lightgray";
+        }
+        else {
+             p.style.backgroundColor = "transparent";
+        }
+    })
 }
 
 function removeSelected() {
