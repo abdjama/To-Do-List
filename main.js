@@ -11,21 +11,18 @@ add.addEventListener("click", function() {
 remove.addEventListener("click", removeSelected);
 
 function addItem(par) {
-    let inputField = inputField.value;
-    if ((inputField.match(/^[ ]+$/i))) {
+    let inputValue = inputField.value;
+    if ((inputValue.match(/^[ ]+$/i))) {
         console.log("invalid");
+        inputField.innerText = "";
     }
-    else if (inputField == "") {
+    else if (inputValue == "") {
         console.log("invaaalid");
     }
     else {
-        let item = inputField.value;
-        par.setAttribute("data-count", count);
-        par.innerText = item;
-        arr.push(par)
-        console.log(arr);
+        par.innerText = inputValue;
         listContainer.appendChild(par);
-        inputField.value = "";
+        inputField.innerText = "";
         par.addEventListener("click", function() {
             selectElement(par);
         });
