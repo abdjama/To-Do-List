@@ -14,7 +14,7 @@ function addItem(par) {
     let inputValue = inputField.value;
     if ((inputValue.match(/^[ ]+$/i))) {
         console.log("invalid");
-        inputField.innerText = "";
+        inputField.value = "";
     }
     else if (inputValue == "") {
         console.log("invaaalid");
@@ -22,12 +22,11 @@ function addItem(par) {
     else {
         par.innerText = inputValue;
         listContainer.appendChild(par);
-        inputField.innerText = "";
+        inputField.value = "";
         par.addEventListener("click", function() {
             selectElement(par);
         });
     }
-   
 }
 
 function selectElement(par) {
