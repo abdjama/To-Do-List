@@ -2,10 +2,7 @@ let inputField = document.getElementById("input");
 let listContainer = document.getElementById("listContainer");
 let add = document.getElementById("add");
 let remove = document.getElementById("remove");
-let count = 0;
 let selectedElement;
-let arr = [];
-let styleCount = 0;
 
 add.addEventListener("click", function() {
     let par = document.createElement("p");
@@ -22,7 +19,6 @@ function addItem(par) {
         console.log("invaaalid");
     }
     else {
-        count++;
         let item = inputField.value;
         par.setAttribute("data-count", count);
         par.innerText = item;
@@ -55,5 +51,4 @@ function selectElement(par) {
 function removeSelected() {
     selectedElement.remove();
     selectedElement = null;
-    count--;
 }
