@@ -34,11 +34,11 @@ function addItem(par) {
 function selectElement(par) {
     selectedElement = par;
     arr.forEach(p => {
-        if (p == selectedElement && p.style.backgroundColor == "lightgray") {
+        if (p == selectedElement && p.style.backgroundColor == "green") {
             p.style.backgroundColor = "transparent";
         }
-        else if (p == selectedElement && p.style.backgroundColor != "lightgray") {
-            p.style.backgroundColor = "lightgray";
+        else if (p == selectedElement && p.style.backgroundColor != "green") {
+            p.style.backgroundColor = "green";
         }
         else {
              p.style.backgroundColor = "transparent";
