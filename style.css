@@ -17,6 +17,8 @@ p {
 
 
 button {
+    background-color: rgb(200, 8, 200);
+    color: white;
     width: 60px;
     height: 20px;
 }
