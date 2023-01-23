@@ -5,10 +5,12 @@ body {
 
 
 section {
-    height: 250px;
-    width: 300px;
+    margin-left: 800px;
     float: left;
-    border: 1px solid black;
+    border: 5px solid #33ff09;
+    margin-top: 300px;
+    width: 740px;
+    height: 670px;
 }
 
 p {
