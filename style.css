@@ -18,6 +18,15 @@ p {
 }
 
 
+input {
+    margin-left: 1628px;
+    margin-top: 539px;
+    width: 345px;
+    height: 52px;
+    float: left;
+    position: absolute;
+}
+
 button {
     margin-left: 77px;
     background-color: rgb(200, 8, 200);
