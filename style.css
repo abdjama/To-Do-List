@@ -19,9 +19,11 @@ p {
 
 
 button {
-    margin-left: 100px;
+    margin-left: 77px;
     background-color: rgb(200, 8, 200);
     color: white;
-    width: 60px;
-    height: 20px;
+    width: 237px;
+    height: 148px;
+    float: left;
+    margin-top: 500px;
 }
