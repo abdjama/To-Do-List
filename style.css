@@ -11,28 +11,42 @@ section {
     margin-top: 300px;
     width: 740px;
     height: 670px;
+    color: white;
 }
 
 p {
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 80px;
+    margin-left: 10px;
 }
 
-
 input {
-    margin-left: 1628px;
+    margin-left: 1690px;
     margin-top: 539px;
     width: 345px;
     height: 52px;
     float: left;
     position: absolute;
+    font-size: 50px;
 }
 
 button {
-    margin-left: 77px;
+    position: absolute;
     background-color: rgb(200, 8, 200);
     color: white;
     width: 237px;
     height: 148px;
     float: left;
-    margin-top: 500px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#add {
+    margin-left: 78px;
+    margin-top: 620px;
+}
+
+#remove {
+    margin-top: 620px;
+    margin-left: 329px;
 }
