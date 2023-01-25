@@ -8,7 +8,17 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
 section {
+    background-color: rgb(44, 41, 208);
     margin-left: 800px;
     float: left;
     border: 5px solid #33ff09;
@@ -16,6 +26,11 @@ section {
     width: 740px;
     height: 670px;
     color: white;
+    overflow: scroll;
+}
+
+section::-webkit-scrollbar {
+    display: none;
 }
 
 p {
