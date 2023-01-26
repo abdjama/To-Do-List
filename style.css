@@ -27,7 +27,7 @@ section {
     height: 670px;
     color: white;
     overflow: scroll;
-    overflow-wrap: break-word;
+    
 }
 
 section::-webkit-scrollbar {
@@ -35,12 +35,11 @@ section::-webkit-scrollbar {
 }
 
  p {
-    line-height: 75px;
     font-size: 55px;
     margin-left: 10px;
-    height: 82px;
     padding: 13px;
     margin-top: 17px;
+    overflow-wrap: break-word;
  }
 
 input {
